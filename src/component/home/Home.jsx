@@ -4,8 +4,12 @@ import HotelService from '../common/HotelService'
 import Parallax from '../common/Parallax'
 import RoomCarousel from '../common/RoomCarousel'
 import RoomSearch from '../common/RoomSearch'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
+  const location = useLocation()
+  const message = location.state && location.state.message
+  const currentUser = localStorage.getItem("userId")
   return (
     <section>
       <MainHeader />

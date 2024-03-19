@@ -13,6 +13,11 @@ import CheckOut from './component/booking/CheckOut'
 import BookingSucces from './component/booking/BookingSucces'
 import Bookings from './component/booking/Bookings'
 import FindBooking from './component/booking/FindBooking'
+import Login from './component/auth/Login'
+import Registration from './component/auth/Registration'
+import Profile from './component/auth/Profile'
+import Logout from './component/auth/Logout'
+import RequireAuth from './component/auth/RequireAuth'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -26,12 +31,22 @@ function App() {
                   <Route path="/edit-room/:roomId" element = {<EditRoom />} />
                   <Route path="/existing-rooms" element = {<ExistingRoom />} />
                   <Route path="/add-room" element = {<AddRoom />} />
-                  <Route path="/book-room/:roomId" element = {<CheckOut />} />
+                  <Route path="/book-room/:roomId"
+                    element = {
+                      <RequireAuth>                     
+                        <CheckOut />
+                      </RequireAuth>
+                    }
+                   />
                   <Route path="/booking-success" element = {<BookingSucces />} />
                   <Route path="/browse-all-rooms" element = {<RoomListing />} />
                   <Route path="/admin" element = {<Admin />} /> 
                   <Route path="/existing-bookings" element = {<Bookings />} /> 
-                  <Route path="/find-booking" element = {<FindBooking />} />                     
+                  <Route path="/find-booking" element = {<FindBooking />} />
+                  <Route path="/login" element = {<Login />} />    
+                  <Route path="/register" element = {<Registration />} /> 
+                  <Route path="/profile" element = {<Profile />} />
+                  <Route path="/logout" element = {<Logout />} />                                                    
               </Routes>
           </Router>
           <Footer />
