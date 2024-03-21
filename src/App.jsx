@@ -18,11 +18,12 @@ import Registration from './component/auth/Registration'
 import Profile from './component/auth/Profile'
 import Logout from './component/auth/Logout'
 import RequireAuth from './component/auth/RequireAuth'
+import { AuthProvider } from './component/auth/AuthProvider'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <AuthProvider>
       <main>
           <Router>
               <Navbar />
@@ -51,7 +52,7 @@ function App() {
           </Router>
           <Footer />
       </main>
-    </>
+    </AuthProvider>
   )
 }
 

@@ -24,6 +24,7 @@ const Login = () => {
     const success = await loginUser(login)
     if (success) {
         const token = success.token
+		console.log(token)
         auth.hanldeLogin(token)
 		navigate(redirectUrl, { replace: true})
     }else{

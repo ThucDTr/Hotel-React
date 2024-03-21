@@ -1,9 +1,12 @@
 body {
   min-height: 100vh;
-  padding-bottom: 50px;
 }
 .card {
   opacity: 0.9;
+}
+
+a{
+  text-decoration: none;
 }
 
 /* Navigation bar definitions */
@@ -23,7 +26,7 @@ body {
   left: 0;
   right: 0;
   content: '';
-  background-color:rgb(169, 77, 123) ;
+  background-color:#fe2c55 ;
   width: 0;
   margin: 0 auto;
   height: 4px;
@@ -54,7 +57,7 @@ body {
 
   /* Hotel custom color */
  .btn-hotel{
-  background-color: rgb(169, 77, 123);
+  background-color:#fe2c55;
   color: #fff;
   }
   .btn-hotel:hover{
@@ -67,7 +70,7 @@ body {
   }
 
   .hotel-color{
-    color: rgb(169, 77, 123);
+    color: #fe2c55;
   }
   .room-price{
     color:darkgoldenrod;
@@ -222,3 +225,11 @@ body {
   text-align: center;
 }
 
+.iconSocial svg{
+  font-size: 30px;
+}
+
+.informationFooter svg{
+  font-size: 25px;
+  margin-right: 15px;
+}
